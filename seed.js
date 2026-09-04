@@ -1,8 +1,15 @@
+import dns from "dns";
+
 import mongoose from "mongoose";
 import { connectDatabase } from "./src/config/database.js";
 import { Product } from "./src/models/Product.js";
 import { ProductVariant } from "./src/models/ProductVariant.js";
 import { EmiPlan } from "./src/models/EmiPlan.js";
+
+dns.setServers([
+  "8.8.8.8",
+  "1.1.1.1",
+]);
 
 const image1 =
   "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=900&q=85";
